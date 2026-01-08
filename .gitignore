@@ -1,0 +1,24 @@
+# Windows 临时文件
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# 系统文件
+Thumbs.db
+.DS_Store
+
+# 编辑器配置
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 日志文件
+*.log
+logs/
+
+# 环境文件
+.env
+.env.local
+.env.*.local
