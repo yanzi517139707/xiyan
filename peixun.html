@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>培训公司产业项目定向培养与输送全流程SOP (定责执行版 v2.12)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --border-color: #e9ecef;
+            --text-color: #333;
+            --header-bg: #eef2f5;
+            --success-color: #27ae60;
+            --warning-color: #e67e22;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 15px 0;
+            font-size: 28px;
+        }
+
+        .meta-box {
+            background-color: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .meta-label {
+            font-weight: 700;
+            min-width: 100px;
+            color: var(--secondary-color);
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .role-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s;
+        }
+
+        .role-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .role-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .role-desc {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            font-size: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--header-bg);
+            color: var(--primary-color);
+            font-weight: 700;
+            white-space: nowrap;
+            border-bottom: 2px solid #dde2e6;
+        }
+
+        td {
+            border-right: 1px solid var(--border-color);
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+
+        .stage-cell {
+            font-weight: 700;
+            color: var(--primary-color);
+            background-color: #f8f9fa;
+            width: 120px;
+        }
+
+        .stage-sub {
+            font-size: 12px;
+            color: #7f8c8d;
+            font-weight: normal;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .step-cell {
+            font-weight: 600;
+            color: var(--secondary-color);
+            width: 140px;
+        }
+
+        .action-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .action-item {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .action-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .action-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .doc-tag {
+            display: inline-block;
+            background: #eef2f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 4px;
+            border: 1px solid #dee2e6;
+        }
+
+        .person-tag {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .role-desc-small {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        .key-point {
+            color: var(--warning-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>培训公司产业项目定向培养与输送全流程SOP (定责执行版)</h1>
+            <div class="meta-box">
+                <div class="meta-item">
+                    <span class="meta-label">核心逻辑：</span>
+                    <span>责任到人 - 明确吴康平、芦静、陈菲三方在各环节的具体分工</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">当前版本：</span>
+                    <span>v2.12 定责执行版 | 2026-02-09</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">核心理念：</span>
+                    <span>"以产业端的真实交付标准为终点，实训班即是'预备役'战场。"</span>
+                </div>
+            </div>
+        </header>
+
+        <h2>核心团队分工</h2>
+        <div class="roles-grid">
+            <div class="role-card">
+                <div class="role-title">👤 吴康平 (孵化/商务)</div>
+                <p class="role-desc">负责项目引进、商业评估、对外宣讲、孵化方需求提出。主抓前端流量与商务对接。</p>
+            </div>
+            <div class="role-card">
+                <div class="role-title">👤 芦静 (教研/技术)</div>
+                <p class="role-desc">负责技术评估、SOP转化、课程设计、讲师培训、专业面试、实训交付。主抓教学质量与交付标准。</p>
+            </div>
+            <div class="role-card">
+                <div class="role-title">👤 陈菲 (教务/运营)</div>
+                <p class="role-desc">负责物料制作、学员筛选、班级管理、基础班运营、输送办理。主抓执行落地与学生管理。</p>
+            </div>
+        </div>
+
+        <h2>全流程执行 SOP</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th width="12%">阶段</th>
+                    <th width="12%">细分步骤</th>
+                    <th width="35%">关键动作 (涉及多方协同)</th>
+                    <th width="15%">核心产出物</th>
+                    <th width="13%">负责人</th>
+                    <th width="13%">关键点</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 阶段一 -->
+                <tr>
+                    <td rowspan="2" class="stage-cell">一、需求对接<span class="stage-sub">(三方协同)</span></td>
+                    <td class="step-cell">1.1 项目需求调研</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">需求发起</span>：提出用人需求（人数/时间/薪资/地点）。</div>
+                            <div class="action-item"><span class="action-title">商业评估</span>：评估项目利润率、结算周期及持续性。</div>
+                            <div class="action-item"><span class="action-title">技术评估</span>：评估SOP标准化程度、能否"量产"。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《项目需求确认单》</span><br>
+                        <span class="doc-tag">《三方对接会议纪要》</span>
+                    </td>
+                    <td>
+                        <span class="person-tag">吴康平</span> <span class="role-desc-small">(商业)</span><br>
+                        <span class="person-tag">芦静</span> <span class="role-desc-small">(技术)</span><br>
+                        <span class="person-tag">产业方</span> <span class="role-desc-small">(需求)</span>
+                    </td>
+                    <td><span class="key-point">负面清单</span><br>明确"不可接受项"，避免无效招生。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">1.2 原始资料提取</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">标准移交</span>：提供SOP、脱敏数据、KPI及"金样/黑样"。</div>
+                            <div class="action-item"><span class="action-title">完整性核查</span>：确认资料足以支撑教学，标准客观量化。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">产业方SOP包</span><br>
+                        <span class="doc-tag">脱敏案例库</span>
+                    </td>
+                    <td>
+                        <span class="person-tag">产业方</span> <span class="role-desc-small">(提供)</span><br>
+                        <span class="person-tag">培训方</span> <span class="role-desc-small">(核查)</span>
+                    </td>
+                    <td><span class="key-point">金样/黑样</span><br>必须提供优劣作品直观对比。</td>
+                </tr>
+
+                <!-- 阶段二 -->
+                <tr>
+                    <td rowspan="5" class="stage-cell">二、课程转化<span class="stage-sub">(芦静主导)</span></td>
+                    <td class="step-cell">2.1 课程设计</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">SOP降维</span>：将产业方文档转化为"傻瓜式"实操手册。</div>
+                            <div class="action-item"><span class="action-title">分级架构</span>：基础班（能做）+ 实训班（达标）。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《实操手册(学生版)》</span><br>
+                        <span class="doc-tag">《实训课程包》</span>
+                    </td>
+                    <td><span class="person-tag">芦静</span></td>
+                    <td><span class="key-point">降维打击</span><br>手册要让小白"看图即懂"。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">2.2 考核标准设计</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">基础班</span>：工具熟练度、流程规范。</div>
+                            <div class="action-item"><span class="action-title">实训班</span>：对标产业方KPI（准确率/产能/通过率）。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《基础班结业标准》</span><br>
+                        <span class="doc-tag">《实训验收表》</span>
+                    </td>
+                    <td><span class="person-tag">芦静</span></td>
+                    <td><span class="key-point">量化标准</span><br>避免主观判断，以数据说话。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">2.3 课程磨课</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">内部闭环</span>：教研团队模拟操作。</div>
+                            <div class="action-item"><span class="action-title">小白测试</span>：招募零基础人员试测，确保能产出合格品。</div>
+                            <div class="action-item"><span class="action-title">脚本固化</span>：形成标准化授课脚本。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《磨课测试报告》</span><br>
+                        <span class="doc-tag">《标准化授课脚本》</span>
+                    </td>
+                    <td><span class="person-tag">芦静</span></td>
+                    <td><span class="key-point">小白测试</span><br>只有零基础能学会，SOP才算合格。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">2.4 讲师招募</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">画像锁定</span>：往期实训班优秀学员或行业熟手。</div>
+                            <div class="action-item"><span class="action-title">定向邀约</span>：考察意愿、耐心及标准理解度。</div>
+                        </div>
+                    </td>
+                    <td><span class="doc-tag">《讲师候选名单》</span></td>
+                    <td><span class="person-tag">芦静</span></td>
+                    <td><span class="key-point">找熟手</span><br>优先用"打过仗"的人。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">2.5 讲师培训</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">脚本灌输</span>：严格按脚本训练，统一授课口径。</div>
+                            <div class="action-item"><span class="action-title">通关试讲</span>：模拟授课直到动作标准，颁发认证。</div>
+                        </div>
+                    </td>
+                    <td><span class="doc-tag">《讲师认证记录》</span></td>
+                    <td><span class="person-tag">芦静</span></td>
+                    <td><span class="key-point">脚本固化</span><br>讲师是脚本执行者，不随意发挥。</td>
+                </tr>
+
+                <!-- 阶段三 -->
+                <tr>
+                    <td rowspan="3" class="stage-cell">三、招募筛选<span class="stage-sub">(协同)</span></td>
+                    <td class="step-cell">3.1 宣传物料准备</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">素材整理</span>：收集真实案例、收入截图、项目前景。</div>
+                            <div class="action-item"><span class="action-title">物料制作</span>：制作PPT、海报、H5报名页。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《宣讲PPT》</span><br>
+                        <span class="doc-tag">《成功案例库》</span>
+                    </td>
+                    <td>
+                        <span class="person-tag">吴康平</span> <span class="role-desc-small">(策划)</span><br>
+                        <span class="person-tag">陈菲</span> <span class="role-desc-small">(制作)</span>
+                    </td>
+                    <td><span class="key-point">真实性</span><br>真实收入截图和案例最有说服力。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">3.2 宣传执行</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">进校宣讲</span>：展示项目Demo与"钱景"，明确门槛。</div>
+                            <div class="action-item"><span class="action-title">社群推广</span>：在目标群体中分发海报与报名入口。</div>
+                        </div>
+                    </td>
+                    <td><span class="doc-tag">《宣讲记录》</span></td>
+                    <td>
+                        <span class="person-tag">吴康平</span> <span class="role-desc-small">(主讲)</span><br>
+                        <span class="person-tag">陈菲</span> <span class="role-desc-small">(协助)</span>
+                    </td>
+                    <td><span class="key-point">严进严出</span><br>丑话说在前面，降低不切实际预期。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">3.3 分层筛选</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">飞书测试</span>：测逻辑与学习潜力（自动剔除负面清单）。</div>
+                            <div class="action-item"><span class="action-title">面试确认</span>：测动机、意愿度及抗压能力。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《入训学员名单》</span><br>
+                        <span class="doc-tag">《学员档案》</span>
+                    </td>
+                    <td>
+                        <span class="person-tag">陈菲</span> <span class="role-desc-small">(测试)</span><br>
+                        <span class="person-tag">芦静</span> <span class="role-desc-small">(面试)</span>
+                    </td>
+                    <td><span class="key-point">动机>能力</span><br>意愿度是核心，技能可训练。</td>
+                </tr>
+
+                <!-- 阶段四 -->
+                <tr>
+                    <td rowspan="2" class="stage-cell">四、教学实施<span class="stage-sub">(执行)</span></td>
+                    <td class="step-cell">4.1 基础班 (通用)</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">集训赋能</span>：掌握工具与流程，完成基础作业。</div>
+                            <div class="action-item"><span class="action-title">筛选漏斗</span>：每日考核，合格者晋级实训班（未达标免费补课）。</div>
+                        </div>
+                    </td>
+                    <td><span class="doc-tag">《基础班合格名单》</span></td>
+                    <td>
+                        <span class="person-tag">陈菲</span> <span class="role-desc-small">(班主任)</span><br>
+                        <span class="person-tag">芦静</span> <span class="role-desc-small">(教学)</span>
+                    </td>
+                    <td><span class="key-point">漏斗机制</span><br>基础班是最好筛选器。</td>
+                </tr>
+                <tr>
+                    <td class="step-cell">4.2 实训班 (项目专精)</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">真题实战</span>：孵化方介入带队，完全模拟真实项目组环境。</div>
+                            <div class="action-item"><span class="action-title">模拟交付</span>：严格按KPI验收，由孵化方/培训方联合点评。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《项目交付合格名单》</span><br>
+                        <span class="doc-tag">《实训作品集》</span>
+                    </td>
+                    <td>
+                        <span class="person-tag">陈菲+芦静</span> <span class="role-desc-small">(执行)</span><br>
+                        <span class="person-tag">孵化方</span> <span class="role-desc-small">(考核)</span>
+                    </td>
+                    <td><span class="key-point">孵化方带队</span><br>在实训中物色苗子，模拟真实管理。</td>
+                </tr>
+
+                <!-- 阶段五 -->
+                <tr>
+                    <td class="stage-cell">五、验收输送<span class="stage-sub">(三方协同)</span></td>
+                    <td class="step-cell">5.1 成果验收与分流</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">终极验收</span>：产业方审核作品/面试，拥有一票否决权。</div>
+                            <div class="action-item"><span class="action-title">分流输送</span>：<br>A. 入职产业方/第三方企业。<br>B. <strong>进入孵化方工作室</strong>（成为合伙人/员工）。</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="doc-tag">《录用确认函》</span><br>
+                        <span class="doc-tag">《工作室入选名单》</span>
+                    </td>
+                    <td>
+                        <span class="person-tag">产业方</span> <span class="role-desc-small">(终审)</span><br>
+                        <span class="person-tag">孵化方</span> <span class="role-desc-small">(选拔)</span><br>
+                        <span class="person-tag">培训方</span> <span class="role-desc-small">(输送)</span>
+                    </td>
+                    <td><span class="key-point">双向出口</span><br>既可就业，也可创业（进工作室）。</td>
+                </tr>
+
+                <!-- 阶段六 -->
+                <tr>
+                    <td class="stage-cell">六、迭代优化</td>
+                    <td class="step-cell">6.1 复盘与沉淀</td>
+                    <td>
+                        <div class="action-list">
+                            <div class="action-item"><span class="action-title">数据复盘</span>：统计通过率、交付质量。</div>
+                            <div class="action-item"><span class="action-title">SOP迭代</span>：优化手册与脚本。</div>
+                        </div>
+                    </td>
+                    <td><span class="doc-tag">《项目复盘报告》</span></td>
+                    <td>
+                        <span class="person-tag">培训方</span> <span class="role-desc-small">(负责)</span><br>
+                        <span class="person-tag">孵化方</span> <span class="role-desc-small">(参与)</span>
+                    </td>
+                    <td><span class="key-point">飞轮效应</span><br>用成功案例带动下一期招生。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
